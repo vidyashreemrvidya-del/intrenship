@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chandana Groups - Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Custom Colors & Typography */
+        body {
+            background-color: #0b068c; /* Dark Blue Background */
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Georgia', serif; /* Matching the slight serif look of the headers */
+        }
+
+        /* Navbar Styling */
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white !important;
+        }
+        
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 10px;
+        }
+
+        .nav-link.active-link {
+            color: #9f9ee1 !important; /* Slightly faded for OVERVIEW */
+        }
+
+        /* Buttons */
+        .btn-red {
+            background-color: #d84b6b;
+            color: white;
+            border-radius: 30px;
+            padding: 8px 25px;
+            font-weight: 500;
+            border: none;
+            transition: 0.3s;
+        }
+        .btn-red:hover {
+            background-color: #c03955;
+            color: white;
+        }
+
+        .btn-dark-blue {
+            background-color: #3b2da2;
+            color: white;
+            border-radius: 30px;
+            padding: 10px;
+            font-weight: 600;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-dark-blue:hover { background-color: #2a1f7a; color: white;}
+
+        .btn-light-blue {
+            background-color: #6a57ec;
+            color: white;
+            border-radius: 30px;
+            padding: 10px;
+            font-weight: 600;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn-light-blue:hover { background-color: #5241c7; color: white;}
+
+        /* Hero Text */
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: bold;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+        .hero-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Form Card */
+        .signup-card {
+            background-color: white;
+            border-radius: 25px;
+            padding: 40px;
+            color: #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .form-control-custom {
+            background-color: #f3ecef;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .form-control-custom::placeholder {
+            color: #888;
+            font-weight: 500;
+        }
+
+        /* Checkbox customization */
+        .form-check-input {
+            border: 1px solid #d84b6b;
+            border-radius: 4px;
+        }
+        .form-check-input:checked {
+            background-color: #d84b6b;
+            border-color: #d84b6b;
+        }
+        .form-check-label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #555;
+            margin-top: 2px;
+        }
+
+        /* Divider styling */
+        .divider-container {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .divider-container::before,
+        .divider-container::after {
+            content: '';
+            flex: 1;
+            border-bottom: 1px solid #ddd;
+        }
+        .divider-container span {
+            padding: 0 10px;
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        /* Bottom link */
+        .footer-text {
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 15px;
+        }
+        .link-green {
+            color: #00d25b;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .link-green:hover { text-decoration: underline; }
+
+        /* Mobile tweaks */
+        @media (max-width: 991px) {
+            .hero-title { font-size: 2.5rem; }
+            .signup-card { margin-top: 40px; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg pt-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">Chandana Groups</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link active-link" href="#">OVERVIEW</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Price</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Feedback</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                        <a href="#" class="btn btn-red">Purchase</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container flex-grow-1 d-flex align-items-center py-5">
+        <div class="row w-100 align-items-center">
+            
+            <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
+                <h1 class="hero-title">Generate Awesome<br>Web Pages</h1>
+                <p class="hero-text">
+                    The most important part of the Startup is the samples. The samples form a set of 25 usable pages you can use as is or you can add new blocks
+                </p>
+                <a href="#" class="btn btn-red px-4 py-2">Learn More</a>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1">
+                <div class="signup-card text-center">
+                    <h3 class="mb-4 fw-bold">Sign Up Now</h3>
+                    
+                    <form>
+                        <div class="mb-3 text-start">
+                            <input type="email" class="form-control form-control-custom w-100" placeholder="Your Email">
+                        </div>
+                        
+                        <div class="mb-3 text-start">
+                            <input type="password" class="form-control form-control-custom w-100" placeholder="Your Password">
+                        </div>
+
+                        <div class="form-check text-start mb-4">
+                            <input class="form-check-input" type="checkbox" id="termsCheck">
+                            <label class="form-check-label" for="termsCheck">
+                                I Agree to the terms of services
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-dark-blue w-100 mb-2">Sign IN</button>
+                        
+                        <div class="divider-container">
+                            <span>or</span>
+                        </div>
+
+                        <button type="button" class="btn btn-light-blue w-100">Login via Google</button>
+                    </form>
+
+                    <p class="footer-text mb-0">
+                        Do you have an Account ? <a href="#" class="link-green">Sign IN</a>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
